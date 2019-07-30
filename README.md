@@ -11,7 +11,7 @@ pyQT Dashboard display of MRI T2 EPG muscle data
 
 This progam summarizes the fitting of muscle MRI T2 data. 
 
-It reads in data from a study directory structure that was created from the .
+It reads in data from a study directory structure that was created from the project https://github.com/EricHughesABC/T2EPGStudiesMuscle
 
 Example data is provided in the study data directory testStudy.
 
