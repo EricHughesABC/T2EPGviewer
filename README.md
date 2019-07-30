@@ -13,7 +13,7 @@ This progam summarizes the fitting of muscle MRI T2 data.
 
 It reads in data from a study directory structure that was created from the .
 
-Example data is provided in the studydata directory.
+Example data is provided in the study data directory testStudy.
 
 Below is a screenshot of the fileopen dialog showing the data file required to be read in.
 
@@ -27,9 +27,9 @@ In order for the EPG fitting to work the following module has to be installed
 
 https://github.com/EricHughesABC/epg
 
-pandas
-seaborn
-matplotlib
-lmfit
-pydicom
+- pandas
+- seaborn
+- matplotlib
+- lmfit
+- pydicom
 
