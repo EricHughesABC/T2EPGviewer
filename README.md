@@ -33,4 +33,5 @@ https://github.com/EricHughesABC/epg
 - matplotlib
 - lmfit
 - pydicom
+- nibabel
 
