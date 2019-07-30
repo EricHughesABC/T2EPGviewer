@@ -27,6 +27,7 @@ In order for the EPG fitting to work the following module has to be installed
 
 https://github.com/EricHughesABC/epg
 
+- pyQT5
 - pandas
 - seaborn
 - matplotlib
