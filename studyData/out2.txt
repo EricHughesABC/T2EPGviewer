@@ -1,0 +1,18 @@
+Folder PATH listing
+Volume serial number is D2A2-0043
+C:.
+\---testStudy
+    \---HC-001
+        \---sess-1
+            \---upperleg
+                +---dicom
+                +---rois
+                |   \---EH
+                \---T2
+                    \---results
+                        +---fat
+                        |   +---fatEPG1
+                        |   \---fatEPG2
+                        \---muscle
+                            +---Azzabou
+                            \---AzzEPG

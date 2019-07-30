@@ -1,0 +1,64 @@
+Folder PATH listing
+Volume serial number is D2A2-0043
+C:.
+|   out.txt
+|   out2.txt
+|   out3.txt
+|   out4.txt
+|   
+\---testStudy
+    |   study_description_file.yml
+    |   
+    \---HC-001
+        \---sess-1
+            \---upperleg
+                +---dicom
+                +---rois
+                |   \---EH
+                |           EH_HC-001_sess-1_upperleg_fat.zip
+                |           EH_HC-001_sess-1_upperleg_muscle.zip
+                |           EH_HC-001_sess-1_upperleg_outline.zip
+                |           
+                \---T2
+                    |   WIP_T2_multiecho_UL_CLEAR.hdr
+                    |   WIP_T2_multiecho_UL_CLEAR.img
+                    |   
+                    \---results
+                        +---fat
+                        |   +---fatEPG1
+                        |   |       fitStudyDataFatEPG1analyze.yml
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_Agg_summary.csv
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_Agg_summary.xls
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_results.csv
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_results.xls
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_summary.csv
+                        |   |       T2_HC-001_sess-1_upperleg_fatEPG1_summary.xls
+                        |   |       
+                        |   \---fatEPG2
+                        |           fitStudyDataFatEPG2analyze.yml
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_Agg_summary.csv
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_Agg_summary.xls
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_results.csv
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_results.xls
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_summary.csv
+                        |           T2_HC-001_sess-1_upperleg_fatEPG2_summary.xls
+                        |           
+                        \---muscle
+                            +---Azzabou
+                            |       fitStudyDataAzzabouAnalyze.yml
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_Agg_summary.csv
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_Agg_summary.xls
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_results.csv
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_results.xls
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_summary.csv
+                            |       T2_HC-001_sess-1_upperleg_Azzabou_summary.xls
+                            |       
+                            \---AzzEPG
+                                    fitStudyDataEPGAzzAnalyze.yml
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_Agg_summary.csv
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_Agg_summary.xls
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_results.csv
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_results.xls
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_summary.csv
+                                    T2_HC-001_sess-1_upperleg_AzzEPG_summary.xls
+                                    
