@@ -55,6 +55,10 @@ class T2imageData():
 
         self.ImageDataT2 = None
         self.mriSliceIMG = None
+        
+        self.t2_data_summary_df = None
+        self.dixon_data_summary_df = None
+        
 
 
 
@@ -169,17 +173,29 @@ class T2imageData():
         print("fn", fn)
 
         resultsDir, resultsFilename = os.path.split(fn)
+        print("resultsDir", resultsDir)
+        print("resultsFilename", resultsFilename)
         resultsDirList = resultsDir.split(os.path.sep)
+        
+        print("resultsDirList",resultsDirList, )
 
         sessionIndex =  [ i for i,w in  enumerate(resultsDirList) if "sess" in w]
+        
+        print("sessionIndex",sessionIndex)
 
         if len(sessionIndex):
             si = sessionIndex[0]
+            
+            print("si",si)
 
-            print(resultsDirList[0],resultsDirList[0][-1])
+            print("resultsDirList",resultsDirList)
+            print("resultsDirList[0]",resultsDirList[0])
+#            print("resultsDirList[0][-1]",resultsDirList[0][-1])
+            
+            if len(resultsDirList[0])>0:
 
-            if ":" == resultsDirList[0][-1]:  # add path seperator if root ends in :
-                resultsDirList[0] = resultsDirList[0]+os.path.sep
+                if ":" == resultsDirList[0][-1]:  # add path seperator if root ends in :
+                    resultsDirList[0] = resultsDirList[0]+os.path.sep
 
             print("resultsDirList[0]", resultsDirList[0])
 
@@ -254,7 +270,9 @@ class T2imageData():
 
     def read_T2_data(self):
         print("read_T2_data function entered")
+        print("self.T2resultsFilenameAndPath", self.T2resultsFilenameAndPath)
         if os.path.exists(self.T2resultsFilenameAndPath):
+            print(self.T2resultsFilenameAndPath, "exists")
             self.t2_data_summary_df = pd.read_csv(self.T2resultsFilenameAndPath)
             self.T2slices = list(self.t2_data_summary_df["slice"].unique())
             return(True)
@@ -264,7 +282,9 @@ class T2imageData():
 
     def read_Dixon_data(self):
         print("read_Dixon_data function entered")
+        print("self.dixonResultsFilenameAndPath",self.dixonResultsFilenameAndPath)
         if os.path.exists(self.dixonResultsFilenameAndPath):
+            print(self.dixonResultsFilenameAndPath, "exists")
             self.dixon_data_summary_df = pd.read_csv(self.dixonResultsFilenameAndPath)
             self.dixonSlices = list(self.dixon_data_summary_df["slice"].unique())
             return(True)
@@ -349,6 +369,9 @@ class T2imageData():
             roi_image_layer[dixon_data_query_df.pixel_index] = dixon_data_query_df[roi_data]
 
 #            self.img1[:,:,2] =  roi_image_layer.reshape((self.numRowsT2,self.numColsT2))
+            self.maskedROIs = np.ma.masked_where(roi_image_layer == 0, roi_image_layer)
+        else:
+            roi_image_layer = np.zeros(self.numRowsT2*self.numColsT2)
             self.maskedROIs = np.ma.masked_where(roi_image_layer == 0, roi_image_layer)
 
 

@@ -10,8 +10,8 @@ from epg import cpmg_epg_b1 as cpmg_epg_b1_c
 
 from scipy import integrate
 
-mxyz90 = np.fromfile( 'epg\mxyz90.txt', sep=' ' )
-mxyz180 = np.fromfile('epg\mxyz180.txt', sep=' ')
+mxyz90 = np.fromfile( 'epg/mxyz90.txt', sep=' ' )
+mxyz180 = np.fromfile('epg/mxyz180.txt', sep=' ')
 
 mxyz90 = mxyz90.reshape(5,512)
 mxyz180 = mxyz180.reshape(5,512)

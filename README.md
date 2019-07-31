@@ -31,6 +31,7 @@ https://github.com/EricHughesABC/epg
 - pandas
 - seaborn
 - matplotlib
+- mplcursors
 - lmfit
 - pydicom
 - nibabel

@@ -138,7 +138,7 @@ if __name__ == "__main__":
 
 #    sns.set_palette("pastel")
 
-    procDataDirPath = r"Z:\testPhenoDM1\PDM001A\sess-1\upperleg\T2\results\muscle\muscleEPG1"
+    procDataDirPath = r"/home/eric/Documents/projects/programming/2019/mri_progs/T2EPGviewer/studyData/testStudy/HC-001/sess-1/upperleg/T2/results/muscle/AzzEPG"
 
 
     progname = os.path.basename(sys.argv[0])

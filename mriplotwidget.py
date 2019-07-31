@@ -239,7 +239,10 @@ class MRIPlotWidget(QtWidgets.QWidget):
             print("fitParam",fitParam)
 
             ### figure out which data set to use
-
+            
+            
+            slice_df = None
+            
             if fitParam in self.imageData.t2_data_summary_df.columns:
                 print(fitParam, "T2 dataFrame chosen")
                 data_df = self.imageData.t2_data_summary_df
@@ -258,17 +261,24 @@ class MRIPlotWidget(QtWidgets.QWidget):
             ### return current slice
 
 #            slice_df = data_df[data_df.slice==cslice+1]
-
-            print("slice_df.shape",slice_df.shape)
-
-            roiList   = slice_df[slice_df['pixel_index']==y*ncols+x]['roi'].values
-            valueList = slice_df[slice_df['pixel_index']==y*ncols+x][fitParam].values
-
-            print("roiList", roiList)
-            print("valueList",valueList)
-
-            fitParamLabel = parameterNames[fitParam][1]
-
+            
+            roiList = []
+            valueList=[]
+            
+            
+            if not isinstance(slice_df, type(None)):
+                print("type(slice_df)",type(slice_df))
+    
+                print("slice_df.shape",slice_df.shape)
+    
+                roiList   = slice_df[slice_df['pixel_index']==y*ncols+x]['roi'].values
+                valueList = slice_df[slice_df['pixel_index']==y*ncols+x][fitParam].values
+    
+                print("roiList", roiList)
+                print("valueList",valueList)
+    
+                fitParamLabel = parameterNames[fitParam][1]
+    
             if len(roiList)>0:
                 roi=roiList[0]
                 value=valueList[0]
